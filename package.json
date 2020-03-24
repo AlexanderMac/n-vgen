@@ -1,6 +1,6 @@
 {
   "name": "n-vgen",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Generates all variants for the charset",
   "main": "index.js",
   "files": [
