@@ -7,6 +7,10 @@ class VGenerator {
     this.maxAttempts = this.charsetLen ** this.secretLen;
   }
 
+  get totalVariants() {
+    return this.charsetLen ** this.secretLen;
+  }
+
   getNext() {
     if (this.currentIndex > this.maxAttempts) {
       return null;

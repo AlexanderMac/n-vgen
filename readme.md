@@ -42,15 +42,18 @@ vgen.getAll(); // returns ['111', '211', ...]
 
 ### VGenerator
 
-#### constructor(charset, secretLen)
+#### constructor(charset: string, secretLen: number)
 
 - `charset` - the charset.
 - `secretLen` - the secret length.
 
-#### getNext()
+#### totalVariants: number
+Returns the total variants.
+
+#### getNext(): string
 Returns the next variant or null if the last one is already generated.
 
-#### getAll()
+#### getAll(): string[]
 Returns all variants.
 
 ## Author
