@@ -1,20 +1,57 @@
-# repo-template
+# n-vgen
 
-[![Build Status](https://travis-ci.org/AlexanderMac/repo-template.svg?branch=master)](https://travis-ci.org/AlexanderMac/repo-template)
-[![Code Coverage](https://codecov.io/gh/AlexanderMac/repo-template/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/repo-template)
-[![npm version](https://badge.fury.io/js/repo-template.svg)](https://badge.fury.io/js/repo-template)
+[![Build Status](https://travis-ci.org/AlexanderMac/n-vgen.svg?branch=master)](https://travis-ci.org/AlexanderMac/n-vgen)
+[![Code Coverage](https://codecov.io/gh/AlexanderMac/n-vgen/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/n-vgen)
+[![npm version](https://badge.fury.io/js/n-vgen.svg)](https://badge.fury.io/js/n-vgen)
 
 ## Features
-TODO
+
+Generates all variants for the charset.
+
+For example, for the charset `123` and the secret length equals 2, it generates the following variants:
+
+```js
+[
+  '11', '21', '31',
+  '12', '22', '32',
+  '13', '23', '33'
+]
+```
 
 ## Commands
-TODO
+
+```sh
+# install
+npm i n-vgen
+```
 
 ## Usage
-TODO
+
+```js
+const VGenerator = require('n-vgen');
+
+let vgen = new VGenerator('123', 2);
+vgen.getNext(); // returns 111
+vgen.getNext(); // returns 211
+...
+
+vgen.getAll(); // returns ['111', '211', ...]
+```
 
 ## API
-TODO
+
+### VGenerator
+
+#### constructor(charset, secretLen)
+
+- `charset` - the charset.
+- `secretLen` - the secret length.
+
+#### getNext()
+Returns the next variant or null if the last one is already generated.
+
+#### getAll()
+Returns all variants.
 
 ## Author
 Alexander Mac
