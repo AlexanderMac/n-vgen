@@ -32,18 +32,6 @@ class VGenerator {
 
     return indexes.map(i => this.charset[i - 1]).join('');
   }
-
-  getAll() {
-    let variants = [];
-    // eslint-disable-next-line no-constant-condition
-    while (true) {
-      let next = this.getNext();
-      if (!next) {
-        return variants;
-      }
-      variants.push(next);
-    }
-  }
 }
 
 module.exports = VGenerator;

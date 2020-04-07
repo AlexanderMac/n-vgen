@@ -6,7 +6,7 @@
 
 ## Features
 
-Generates all variants for the charset.
+Generates all variants for a character set.
 
 For example, for the charset `123` and the secret length equals 2, it generates the following variants:
 
@@ -34,8 +34,6 @@ let vgen = new VGenerator('123', 2);
 vgen.getNext(); // returns 111
 vgen.getNext(); // returns 211
 ...
-
-vgen.getAll(); // returns ['111', '211', ...]
 ```
 
 ## API
@@ -50,11 +48,11 @@ vgen.getAll(); // returns ['111', '211', ...]
 #### totalVariants: number
 Returns the total variants.
 
+#### currentIndex: number
+Returns the current variant's index.
+
 #### getNext(): string
 Returns the next variant or null if the last one is already generated.
-
-#### getAll(): string[]
-Returns all variants.
 
 ## Author
 Alexander Mac
