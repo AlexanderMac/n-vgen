@@ -4,15 +4,11 @@ class VGenerator {
     this.charset = charset;
     this.charsetLen = charset.length;
     this.secretLen = secretLen;
-    this.maxAttempts = this.charsetLen ** this.secretLen;
-  }
-
-  get totalVariants() {
-    return this.charsetLen ** this.secretLen;
+    this.totalVariants = this.charsetLen ** this.secretLen;
   }
 
   getNext() {
-    if (this.currentIndex > this.maxAttempts) {
+    if (this.currentIndex > this.totalVariants) {
       return null;
     }
 
