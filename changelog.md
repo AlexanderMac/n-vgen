@@ -1,3 +1,8 @@
+# <sub>v0.3.0</sub>
+#### _Jun. 15 2020_
+  * Cleanup codebase.
+  * Update dependencies.
+
 # <sub>v0.2.0</sub>
 #### _Apr. 7 2020_
   * Remove `getAll` method.
