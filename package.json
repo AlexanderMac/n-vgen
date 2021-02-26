@@ -7,10 +7,15 @@
     "index.js",
     "index.d.ts"
   ],
+  "engines": {
+    "node": ">=12",
+    "npm": ">=7"
+  },
   "scripts": {
     "lint": "eslint --ext .js ./ test/",
     "test": "NODE_ENV=test mocha",
-    "coverage": "nyc npm test"
+    "coverage": "nyc npm test",
+    "coverage-gh": "nyc --reporter=lcov npm test && codecov"
   },
   "repository": {
     "type": "git",
@@ -27,7 +32,6 @@
     "url": "https://github.com/AlexanderMac/n-vgen/issues"
   },
   "homepage": "https://github.com/AlexanderMac/n-vgen#readme",
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^7.2.0",
     "mocha": "^8.0.1",
