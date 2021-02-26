@@ -1,6 +1,6 @@
 # n-vgen
 
-[![Build Status](https://travis-ci.org/AlexanderMac/n-vgen.svg?branch=master)](https://travis-ci.org/AlexanderMac/n-vgen)
+[![Build Status](https://github.com/AlexanderMac/n-vgen/workflows/CI/badge.svg)](https://github.com/AlexanderMac/n-vgen/actions?query=workflow%3ACI)
 [![Code Coverage](https://codecov.io/gh/AlexanderMac/n-vgen/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/n-vgen)
 [![npm version](https://badge.fury.io/js/n-vgen.svg)](https://badge.fury.io/js/n-vgen)
 
@@ -28,11 +28,11 @@ npm i n-vgen
 ## Usage
 
 ```js
-const VGenerator = require('n-vgen');
+const VGenerator = require('n-vgen')
 
-let vgen = new VGenerator('123', 2);
-vgen.getNext(); // returns 111
-vgen.getNext(); // returns 211
+let vgen = new VGenerator('123', 2)
+vgen.getNext() // returns 111
+vgen.getNext() // returns 211
 ...
 ```
 
