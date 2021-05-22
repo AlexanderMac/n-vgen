@@ -4,7 +4,7 @@
 [![Code Coverage](https://codecov.io/gh/AlexanderMac/n-vgen/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/n-vgen)
 [![npm version](https://badge.fury.io/js/n-vgen.svg)](https://badge.fury.io/js/n-vgen)
 
-## Features
+### Features
 
 Generates all variants for a character set.
 
@@ -18,15 +18,13 @@ For example, for the charset `123` and the secret length equals 2, it generates 
 ]
 ```
 
-## Commands
-
-```sh
+### Commands
+```bassh
 # install
 npm i n-vgen
 ```
 
-## Usage
-
+### Usage
 ```js
 const VGenerator = require('n-vgen')
 
@@ -36,26 +34,27 @@ vgen.getNext() // returns 211
 ...
 ```
 
-## API
+### API
 
-### VGenerator
+##### VGenerator
 
-#### constructor(charset: string, secretLen: number)
+###### constructor(charset: string, secretLen: number)
 
 - `charset` - the charset.
 - `secretLen` - the secret length.
 
-#### totalVariants: number
+###### totalVariants: number
 Returns the total variants.
 
-#### currentIndex: number
+###### currentIndex: number
 Returns the current variant's index.
 
-#### getNext(): string
+###### getNext(): string
 Returns the next variant or null if the last one is already generated.
 
-## Author
-Alexander Mac
 
-## Licence
+### Licence
 Licensed under the MIT license.
+
+### Author
+Alexander Mac
